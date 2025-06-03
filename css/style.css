@@ -1,0 +1,288 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: white;
+}
+
+/* Navigasi */
+nav {
+    background-color: #3498db;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #2980b9;
+}
+
+/* Konten Utama */
+.section {
+    display: none;
+    padding: 40px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease;
+    max-width: 800px;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Menampilkan section yang aktif */
+.section.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Judul umum */
+.section h1 {
+    margin-bottom: 1rem;
+}
+
+/* Judul Home */
+#home h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #2c3e50;
+}
+
+/* Tombol Mode */
+.mode-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: #3498db;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    transition: background-color 0.3s ease;
+}
+
+.mode-toggle:hover {
+    background-color: #2980b9;
+}
+
+/* DARK MODE TAMBAHAN */
+body.dark-mode nav {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode nav a {
+    color: white;
+}
+
+body.dark-mode nav a:hover {
+    background-color: #333;
+}
+
+body.dark-mode .section {
+    background-color: #1f1f1f;
+    color: white;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode #home h1 {
+    color: #ecf0f1;
+}
+
+/* Gambar di Tengah */
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;  /* Menyesuaikan gambar dengan lebar kontainer */
+    height: auto;  /* Menjaga rasio gambar */
+}
+
+/* Menjaga gambar di tengah pada Home */
+#home {
+    min-height: 100vh;
+}
+
+/* Komentar Gallery */
+.gallery-comments {
+    max-width: 400px;
+    margin: 10px auto 20px auto;
+    text-align: left;
+    background: #f2f2f2;
+    border-radius: 8px;
+    padding: 10px 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+body.dark-mode .gallery-comments {
+    background: #232323;
+    color: #fff;
+    box-shadow: 0 2px 8px rgba(255,255,255,0.04);
+}
+.gallery-comments strong {
+    display: block;
+    margin-bottom: 6px;
+}
+.gallery-comments .comment-item {
+    border-bottom: 1px solid #e0e0e0;
+    padding: 4px 0;
+}
+body.dark-mode .gallery-comments .comment-item {
+    border-bottom: 1px solid #444;
+}
+.gallery-comments em {
+    color: #888;
+}
+.gallery-comment-form {
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.gallery-comment-form input[type="text"],
+.gallery-comment-form textarea {
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+body.dark-mode .gallery-comment-form input[type="text"],
+body.dark-mode .gallery-comment-form textarea {
+    background: #232323;
+    color: #fff;
+    border: 1px solid #444;
+}
+.gallery-comment-form button {
+    padding: 6px 16px;
+    border-radius: 6px;
+    border: none;
+    background: #3498db;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.gallery-comment-form button:hover {
+    background: #2980b9;
+}
+
+/* Gambar Gallery */
+.gallery-img {
+    width: 350px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.home-img {
+    border: 6px solid #4a90e2;
+    border-radius: 18px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    padding: 6px;
+    background: #fff;
+    display: block;
+    margin: 0 auto 20px auto;
+    max-width: 100%;
+}
+
+/* Section Contact */
+.contact-section {
+    background: #fff;
+    border-radius: 14px;
+    padding: 24px 18px 18px 18px;
+    margin: 30px auto 0 auto;
+    max-width: 400px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+.contact-section h1 {
+    color: #222;
+    margin-bottom: 18px;
+    font-size: 1.7em;
+    text-align: center;
+}
+.contact-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    color: #222;
+    font-size: 1.08em;
+}
+.contact-info img {
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    /* Hapus filter agar ikon tidak terlalu pudar */
+    /* filter: grayscale(1) brightness(0.7); */
+    vertical-align: middle;
+}
+.contact-info span, .contact-info a {
+    color: #fff;
+    font-size: 1.08em;
+    font-weight: 500;
+    vertical-align: middle;
+}
+.contact-info a[href*="instagram.com"] {
+    color: #fff;
+}
+.contact-info a[href*="instagram.com"]:hover {
+    color: #E4405F;
+}
+.contact-info img[alt="Email"] {
+    filter: none;
+    background: #fff;
+    border-radius: 50%;
+    padding: 2px;
+    border: 1.5px solid #d14836;
+}
+.contact-info img[alt="Instagram"] {
+    filter: none;
+    background: #fff;
+    border-radius: 7px;
+    padding: 2px;
+    border: 1.5px solid #E4405F;
+}
+.contact-info a {
+    color: #222;
+    text-decoration: none;
+    font-weight: 500;
+}
+.contact-info a:hover {
+    text-decoration: underline;
+    color: #111;
+}
+
+/* Tambahan untuk Light Mode */
+body.light-mode .contact-info span,
+body.light-mode .contact-info a {
+    color: #222 !important;
+}
